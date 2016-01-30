@@ -28,8 +28,8 @@ public class save_and_load : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (GameObject.FindGameObjectsWithTag("scoresave").Length > 1) Destroy(this.gameObject);
-        else DontDestroyOnLoad(this);
+        //if (GameObject.FindGameObjectsWithTag("scoresave").Length > 1) Destroy(this.gameObject);
+        //else DontDestroyOnLoad(this);
 
 
     }
@@ -38,14 +38,17 @@ public class save_and_load : MonoBehaviour {
     void Update () {
         hiscore = Load_Score();
         //Debug.Log(hiscore);
+        if (Input.GetKeyDown(KeyCode.Z)) InitHiScore();
 	
 	}
 
 
     public void Save_Score(int score)
     {
+        Debug.Log("ok");
         int hiscore = Load_Score();
-        if(score>=hiscore) PlayerPrefs.SetInt("hiscore", score);
+        if (score >= hiscore) PlayerPrefs.SetInt("hiscore", score);
+        else if (score < hiscore) PlayerPrefs.SetInt("hiscore", hiscore);
 
     }
 
@@ -53,5 +56,10 @@ public class save_and_load : MonoBehaviour {
     public int Load_Score()
     {
         return PlayerPrefs.GetInt("hiscore");
+    }
+
+    public void InitHiScore()
+    {
+        PlayerPrefs.SetInt("hiscore", 0);
     }
 }

@@ -65,7 +65,7 @@ public class CameraMove : MonoBehaviour {
             }
         }
         hit = false;
-
+        Debug.Log(score);
         dead();
     }
     void OnCollisionStay(Collision collision)
