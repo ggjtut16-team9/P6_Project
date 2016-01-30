@@ -12,8 +12,8 @@ public class Target : MonoBehaviour {
 	void Update () {
         if (cameraMove.PlayerGoEnd())
         {
-            transform.position = new Vector3(0, 0.3f, 25.0f);
-            transform.Rotate(new Vector3(0, 0, 0));
+            transform.position = new Vector3(0, 0.3f, 5.0f);
+            transform.rotation = new Quaternion(0,0,0,0);
         }
         else
         {
