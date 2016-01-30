@@ -17,6 +17,7 @@ public class returnTitle : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             score.SendMessage("Save_Score", cameramove.score);
+            DontDestroyOnLoad(score);
             Application.LoadLevel("titleScene");
         }
 	}
