@@ -13,9 +13,9 @@ public class SceneControler : MonoBehaviour {
 
 	
 	}
-    public void loadtestVRScene()
+    public void loadTitleScene()
     {
-        Application.LoadLevel("testVR");
+        Application.LoadLevel("TitleScene");
         
     }
 
@@ -24,8 +24,8 @@ public class SceneControler : MonoBehaviour {
         Application.LoadLevel("test");
     }
 
-    public void loadUIScene()
+    public void loadStoryScene()
     {
-        Application.LoadLevel("UIScene");
+        Application.LoadLevel("StoryScene");
     }
 }
