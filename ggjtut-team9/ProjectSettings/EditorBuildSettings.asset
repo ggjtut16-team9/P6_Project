@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/VRroad/Scene/UIScene.unity
+  - enabled: 1
     path: Assets/VRroad/Scene/test.unity
+  - enabled: 1
+    path: Assets/VRroad/Scene/testVR.unity
