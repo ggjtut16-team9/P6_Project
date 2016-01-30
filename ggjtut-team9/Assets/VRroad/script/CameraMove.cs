@@ -57,6 +57,8 @@ public class CameraMove : MonoBehaviour {
             }
         }
         hit = false;
+
+        dead();
     }
     void OnCollisionStay(Collision collision)
     {
@@ -76,5 +78,13 @@ public class CameraMove : MonoBehaviour {
     public bool PlayerGoEnd()
     {
         return startSide;
+    }
+
+    void dead()
+    {
+        if (transform.position.y <= -20)
+        {
+            Application.LoadLevel("resultScene");
+        }
     }
 }

@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/VRroad/Scene/test.unity
   - enabled: 1
     path: Assets/VRroad/Scene/testVR.unity
+  - enabled: 1
+    path: Assets/VRroad/Scene/resultScene.unity
