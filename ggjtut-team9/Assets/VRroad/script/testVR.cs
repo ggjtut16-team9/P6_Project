@@ -10,8 +10,6 @@ public class testVR : MonoBehaviour {
     GameObject player;
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindWithTag("Player");
-        anim = player.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
