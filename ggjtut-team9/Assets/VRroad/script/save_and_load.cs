@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 public class save_and_load : MonoBehaviour {
 
     /// <summary>
@@ -19,25 +20,24 @@ public class save_and_load : MonoBehaviour {
     ///                string
     /// 
 
-    ScoreSave scoresave;
-    public GameObject save;
+
 
     int hiscore;
 
+    Text tex;
 
     // Use this for initialization
     void Start () {
-        scoresave = save.GetComponent<ScoreSave>();
+        if (GameObject.FindGameObjectsWithTag("scoresave").Length > 1) Destroy(this.gameObject);
+        else DontDestroyOnLoad(this);
 
 
-        Save_Score(scoresave.score);
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
         hiscore = Load_Score();
-        Debug.Log(hiscore);
+        //Debug.Log(hiscore);
 	
 	}
 
