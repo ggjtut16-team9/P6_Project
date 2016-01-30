@@ -11,9 +11,13 @@ public class CameraMove : MonoBehaviour {
 
     private int count = 0;
 
+    ScoreSave scoresave;
+    public GameObject save;
+
     private bool startSide = true;
 	// Use this for initialization
 	void Start () {
+        scoresave = save.GetComponent<ScoreSave>();
 	
 	}
 	
@@ -68,10 +72,13 @@ public class CameraMove : MonoBehaviour {
         if (collision.collider.tag == "StartPos" && !startSide)
         {
             startSide = true;
+            scoresave.score++;
+                
         }
         else if (collision.collider.tag == "EndPos" && startSide)
         {
             startSide = false;
+            scoresave.score++;
         }
     }
 
@@ -85,6 +92,7 @@ public class CameraMove : MonoBehaviour {
         if (transform.position.y <= -20)
         {
             Application.LoadLevel("resultScene");
+            save.SendMessage("Save_Score", scoresave.score);
         }
     }
 }

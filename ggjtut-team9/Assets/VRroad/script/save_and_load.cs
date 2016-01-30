@@ -19,15 +19,25 @@ public class save_and_load : MonoBehaviour {
     ///                string
     /// 
 
+    ScoreSave scoresave;
+    public GameObject save;
+
+    int hiscore;
+
 
     // Use this for initialization
     void Start () {
+        scoresave = save.GetComponent<ScoreSave>();
+
+
+        Save_Score(scoresave.score);
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        hiscore = Load_Score();
+        Debug.Log(hiscore);
 	
 	}
 
