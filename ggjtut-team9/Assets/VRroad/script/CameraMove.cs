@@ -7,6 +7,11 @@ public class CameraMove : MonoBehaviour {
     public GameObject core;
     public Vector3 pos;
     private bool hit = false;
+    private float upDownAngle = 0;
+
+    private int count = 0;
+
+    private bool startSide = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,17 +22,59 @@ public class CameraMove : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow)) transform.Rotate(Vector3.up*Time.deltaTime*speed);
         if (Input.GetKey(KeyCode.LeftArrow)) transform.Rotate(-Vector3.up * Time.deltaTime*speed);
 
-        if (Input.GetKey(KeyCode.UpArrow)) core.transform.Rotate(-Vector3.right * Time.deltaTime*speed);
-        if (Input.GetKey(KeyCode.DownArrow)) core.transform.Rotate(Vector3.right * Time.deltaTime*speed);
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && hit)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            this.GetComponent<Rigidbody>().AddForce(GameObject.FindWithTag("MainCamera").transform.forward * 7.5f, ForceMode.Impulse);
+            upDownAngle += -Time.deltaTime * speed;
+            if (upDownAngle < -70.0f) upDownAngle = -70.0f;
+            else
+            core.transform.Rotate(-Vector3.right * Time.deltaTime * speed);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            upDownAngle += Time.deltaTime * speed;
+            if (upDownAngle > 70.0f) upDownAngle = 70.0f;
+            else
+            core.transform.Rotate(Vector3.right * Time.deltaTime * speed);
+        }
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        {
+            if (hit)
+            {
+                Vector3 cameraFront = GameObject.FindWithTag("MainCamera").transform.forward;
+                cameraFront.y = 0;
+                cameraFront = Vector3.Normalize(cameraFront);
+
+                cameraFront.y = 2.0f;
+                cameraFront = Vector3.Normalize(cameraFront);
+                this.GetComponent<Rigidbody>().AddForce(cameraFront * 5.0f, ForceMode.Impulse);
+                count = 0;
+            }
+            else
+            {
+                if(count < 3)
+                this.GetComponent<Rigidbody>().AddForce(new Vector3(0, 3.0f, 0), ForceMode.Impulse);
+                count++;
+            }
         }
         hit = false;
     }
     void OnCollisionStay(Collision collision)
     {
-        hit = true;
+        if (collision.collider.tag != "ErectricPorn")
+            hit = true;
+
+        if (collision.collider.tag == "StartPos" && !startSide)
+        {
+            startSide = true;
+        }
+        else if (collision.collider.tag == "EndPos" && startSide)
+        {
+            startSide = false;
+        }
     }
 
+    public bool PlayerGoEnd()
+    {
+        return startSide;
+    }
 }
