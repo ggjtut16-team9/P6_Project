@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 496040}
-  - 114: {fileID: 11434276}
+  - 114: {fileID: 11447244}
   m_Layer: 0
   m_Name: ScoreSave
-  m_TagString: Untagged
+  m_TagString: scoresave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11434276
+--- !u!114 &11447244
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -36,10 +36,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 162160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c638c4c5b838d49ab520d929ddceeb, type: 3}
+  m_Script: {fileID: 11500000, guid: b1ee67a0af965e3458e6a715f2d63ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  hiscore: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

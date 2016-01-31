@@ -3,8 +3,11 @@ using System.Collections;
 
 public class SceneControler : MonoBehaviour {
 
+    public GameObject scoresave;
+
 	// Use this for initialization
 	void Start () {
+
 	
 	}
 	
@@ -21,11 +24,14 @@ public class SceneControler : MonoBehaviour {
 
     public void loadtestScene()
     {
+        DontDestroyOnLoad(scoresave);
         Application.LoadLevel("test");
     }
 
     public void loadStoryScene()
     {
+        DontDestroyOnLoad(scoresave);
         Application.LoadLevel("StoryScene");
+
     }
 }

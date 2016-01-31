@@ -22,7 +22,7 @@ public class save_and_load : MonoBehaviour {
 
 
 
-    int hiscore;
+    public int hiscore=0;
 
     Text tex;
 
@@ -31,14 +31,13 @@ public class save_and_load : MonoBehaviour {
         //if (GameObject.FindGameObjectsWithTag("scoresave").Length > 1) Destroy(this.gameObject);
         //else DontDestroyOnLoad(this);
 
-//        InitHiScore();
+//       InitHiScore();
 
 
     }
 
     // Update is called once per frame
     void Update () {
-        hiscore = Load_Score();
         //Debug.Log(hiscore);
         if (Input.GetKeyDown(KeyCode.Z)) InitHiScore();
 	
@@ -57,7 +56,8 @@ public class save_and_load : MonoBehaviour {
 
     public int Load_Score()
     {
-        return PlayerPrefs.GetInt("hiscore");
+        hiscore = PlayerPrefs.GetInt("hiscore");
+        return hiscore;
     }
 
     public void InitHiScore()

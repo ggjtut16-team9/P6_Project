@@ -106,7 +106,7 @@ public class CameraMove : MonoBehaviour {
 
     void dead()
     {
-        if (transform.position.y <= -10)
+        if (transform.position.y <= -50)
         {
             //transform.position = spawn.transform.position;
             //transform.rotation = spawn.transform.rotation;

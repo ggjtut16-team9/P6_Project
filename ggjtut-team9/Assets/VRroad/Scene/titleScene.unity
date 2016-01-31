@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9f327c06f8120874aa029411cd0352cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &200126106 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 162160, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+  m_PrefabInternal: {fileID: 544220135}
 --- !u!1 &511747398
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +188,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2114913241}
+  scoresave: {fileID: 200126106}
+--- !u!1001 &544220135
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496040, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &859774705
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f80d819f76672d468d110e25f4a9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoresave: {fileID: 162160, guid: acbbd4e5972002a42bd8acd42514a0f6, type: 2}
 --- !u!1 &1231923477
 GameObject:
   m_ObjectHideFlags: 0
