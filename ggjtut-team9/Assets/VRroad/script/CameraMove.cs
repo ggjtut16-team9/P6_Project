@@ -110,7 +110,10 @@ public class CameraMove : MonoBehaviour {
         {
             //transform.position = spawn.transform.position;
             //transform.rotation = spawn.transform.rotation;
+            save.SendMessage("Save_Score", score);
+
             Application.LoadLevel("test");
+
         }
     }
 }
