@@ -26,7 +26,6 @@ public class CameraMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         scoresave = save.GetComponent<ScoreSave>();
-
 	}
 	
 	// Update is called once per frame
@@ -93,12 +92,16 @@ public class CameraMove : MonoBehaviour {
         {
             startSide = true;
             score += 1;
+			ParticleSystem particle = FindObjectOfType<ParticleSystem> ();
+			particle.Play ();
             AudioManager.Instance.PlaySE(3);
         }
         else if (collision.collider.tag == "EndPos" && startSide)
         {
             startSide = false;
             score += 1;
+			ParticleSystem particle = FindObjectOfType<ParticleSystem> ();
+			particle.Play ();
             AudioManager.Instance.PlaySE(3);
         }
     }
