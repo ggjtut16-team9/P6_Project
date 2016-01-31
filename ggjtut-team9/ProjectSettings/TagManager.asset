@@ -10,6 +10,9 @@ TagManager:
   - StartPos
   - EndPos
   - scoresave
+  - Car
+  - ground
+  - AudioManager
   layers:
   - Default
   - TransparentFX

@@ -19,10 +19,11 @@ public class CameraMove : MonoBehaviour {
     public GameObject spawn;
 
     public int score = 0;
+
 	// Use this for initialization
 	void Start () {
         scoresave = save.GetComponent<ScoreSave>();
-	
+
 	}
 	
 	// Update is called once per frame
@@ -56,11 +57,14 @@ public class CameraMove : MonoBehaviour {
                 cameraFront = Vector3.Normalize(cameraFront);
                 this.GetComponent<Rigidbody>().AddForce(cameraFront * 5.0f, ForceMode.Impulse);
                 count = 0;
+				AudioManager.Instance.PlaySE (0);
             }
             else
             {
-                if(count < 3)
-                this.GetComponent<Rigidbody>().AddForce(new Vector3(0, 3.0f, 0), ForceMode.Impulse);
+				if (count < 3) {
+					this.GetComponent<Rigidbody>().AddForce(new Vector3(0, 3.0f, 0), ForceMode.Impulse);
+					AudioManager.Instance.PlaySE (0);
+				}
                 count++;
             }
         }
@@ -85,6 +89,14 @@ public class CameraMove : MonoBehaviour {
             score += 1;
         }
     }
+
+	void OnCollisionEnter(Collision collision){
+		if (collision.collider.tag == "ground" || 
+			collision.collider.tag == "StartPos" ||
+			collision.collider.tag == "EncPos") {
+			AudioManager.Instance.PlaySE (1);
+		}
+	}
 
     public bool PlayerGoEnd()
     {
