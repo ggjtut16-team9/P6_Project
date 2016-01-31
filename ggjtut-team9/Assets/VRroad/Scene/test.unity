@@ -216,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 25815041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 2, y: 2, z: 1.3}
+  m_LocalScale: {x: 2.48, y: 2, z: 1.3}
   m_Children: []
   m_Father: {fileID: 181596026}
   m_RootOrder: 0
@@ -330,7 +330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431794, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30
+      value: -29.62
       objectReference: {fileID: 0}
     - target: {fileID: 431794, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
       propertyPath: m_LocalRotation.x
@@ -362,7 +362,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 160234, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: ErectricPorn
+      objectReference: {fileID: 0}
+    - target: {fileID: 431794, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2840
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
@@ -381,8 +385,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.009079917, z: 0.01}
-  m_Center: {x: 0, y: 0.0004600402, z: 0}
+  m_Size: {x: 0.01, y: 0.006337086, z: 0.01}
+  m_Center: {x: 0, y: 0.001831452, z: 0}
 --- !u!1001 &95861362
 Prefab:
   m_ObjectHideFlags: 0
@@ -1010,6 +1014,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1271186725}
+--- !u!1001 &548050477
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_TagString
+      value: ErectricPorn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &577851858 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ea8938e6786221441a73f3a11a3f4d67, type: 3}
@@ -2958,7 +3020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1 &808928669 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ea8938e6786221441a73f3a11a3f4d67, type: 3}
@@ -3041,6 +3103,10 @@ Prefab:
       propertyPath: m_TagString
       value: ErectricPorn
       objectReference: {fileID: 0}
+    - target: {fileID: 431794, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2840
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1096541a3aab44744a7eb8b9a45a2875, type: 2}
   m_IsPrefabParent: 0
@@ -3058,8 +3124,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.009315686, z: 0.01}
-  m_Center: {x: 0, y: 0.00034215566, z: 0}
+  m_Size: {x: 0.01, y: 0.006417091, z: 0.01}
+  m_Center: {x: 0, y: 0.0017914508, z: 0}
 --- !u!1 &896532575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,6 +3238,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1001 &1018542367
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_Name
+      value: tonneru (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+      propertyPath: m_TagString
+      value: ErectricPorn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e05dfe708dc6f1847827a48f10565981, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1050489178
 GameObject:
   m_ObjectHideFlags: 0
