@@ -31,6 +31,8 @@ public class save_and_load : MonoBehaviour {
         //if (GameObject.FindGameObjectsWithTag("scoresave").Length > 1) Destroy(this.gameObject);
         //else DontDestroyOnLoad(this);
 
+        InitHiScore();
+
 
     }
 
