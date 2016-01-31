@@ -18,7 +18,7 @@ public class CameraMove : MonoBehaviour {
 
     public GameObject spawn;
 
-    public int score = 0;
+    public int score = -1;
 	// Use this for initialization
 	void Start () {
         scoresave = save.GetComponent<ScoreSave>();

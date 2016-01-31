@@ -18,6 +18,8 @@ public class WriteScore : MonoBehaviour {
         }
         else tex.text = "HISCORE:0";
 
+        Time.timeScale = 0;
+
 
     }
 	
