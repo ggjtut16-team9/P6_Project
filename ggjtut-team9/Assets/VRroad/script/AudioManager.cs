@@ -45,14 +45,6 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip[] Voice;
 
 	void Awake (){
-		GameObject[] obj = GameObject.FindGameObjectsWithTag("AudioManager");
-		if( obj.Length > 1 ){
-			// 既に存在しているなら削除
-			Destroy(gameObject);
-		}else{
-			// 音管理はシーン遷移では破棄させない
-			DontDestroyOnLoad(gameObject);
-		}
 
 		// 全てのAudioSourceコンポーネントを追加する
 
