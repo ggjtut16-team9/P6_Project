@@ -238,6 +238,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  tex:
+  - {fileID: 2800000, guid: 640eef1c700485b4696a381f4cf63397, type: 3}
+  - {fileID: 2800000, guid: fb5b446051a194a4f9a3d265476d742c, type: 3}
+  - {fileID: 2800000, guid: 09d07c2f3b21252469575958265f042a, type: 3}
+  - {fileID: 2800000, guid: 03b74f7ca19501f4c8f10e86fc809880, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -245,6 +250,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mat.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tex.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Car
@@ -297,6 +310,42 @@ Prefab:
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mat.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d651478786406cd469dcff08848946ba, type: 2}
+    - target: {fileID: 0}
+      propertyPath: mat.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7814db8b4385e0e468da8b411c1d9b8a, type: 2}
+    - target: {fileID: 0}
+      propertyPath: mat.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5dc4381d692479f4f818538c5d9fdeb9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: mat.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0424d78ee6adedf419233144cedeffa2, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d651478786406cd469dcff08848946ba, type: 2}
+    - target: {fileID: 0}
+      propertyPath: tex.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 640eef1c700485b4696a381f4cf63397, type: 3}
+    - target: {fileID: 0}
+      propertyPath: tex.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: fb5b446051a194a4f9a3d265476d742c, type: 3}
+    - target: {fileID: 0}
+      propertyPath: tex.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: 09d07c2f3b21252469575958265f042a, type: 3}
+    - target: {fileID: 0}
+      propertyPath: tex.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: 03b74f7ca19501f4c8f10e86fc809880, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100560}

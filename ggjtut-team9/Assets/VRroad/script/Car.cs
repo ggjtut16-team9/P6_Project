@@ -7,10 +7,11 @@ public class Car : MonoBehaviour {
     private AudioSource[] source;
     [SerializeField]
     private float speed;
-
+    [SerializeField]
+    Texture[] tex;
 	// Use this for initialization
 	void Start () {
-	    
+        this.GetComponent<MeshRenderer>().material.mainTexture = tex[Random.Range(0,4)];
 	}
 	
 	// Update is called once per frame
