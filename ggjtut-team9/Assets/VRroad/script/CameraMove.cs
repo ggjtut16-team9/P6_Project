@@ -81,12 +81,13 @@ public class CameraMove : MonoBehaviour {
         {
             startSide = true;
             score += 1;
-
+            AudioManager.Instance.PlaySE(3);
         }
         else if (collision.collider.tag == "EndPos" && startSide)
         {
             startSide = false;
             score += 1;
+            AudioManager.Instance.PlaySE(3);
         }
     }
 
@@ -105,7 +106,7 @@ public class CameraMove : MonoBehaviour {
 
     void dead()
     {
-        if (transform.position.y <= -20)
+        if (transform.position.y <= -10)
         {
             //transform.position = spawn.transform.position;
             //transform.rotation = spawn.transform.rotation;
