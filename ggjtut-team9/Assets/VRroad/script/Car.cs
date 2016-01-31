@@ -5,6 +5,8 @@ public class Car : MonoBehaviour {
 
     private bool left = true;
     private AudioSource[] source;
+    [SerializeField]
+    private float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -15,12 +17,12 @@ public class Car : MonoBehaviour {
 	void Update () {
         if (left)
         {
-            transform.position += new Vector3(15, 0, 0) * Time.deltaTime;
+            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             if (transform.position.x > 50.0f) Destroy(this.gameObject);
         }
         else
         {
-            transform.position -= new Vector3(15, 0, 0) * Time.deltaTime;
+            transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             if (transform.position.x < -50.0f) Destroy(this.gameObject);
         }
 	}

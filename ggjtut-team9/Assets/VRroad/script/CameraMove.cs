@@ -19,6 +19,9 @@ public class CameraMove : MonoBehaviour {
     public GameObject spawn;
 
     public int score = 0;
+    private bool endFlag = false;
+    private bool carHit = false;
+    private bool jumpFlag = false;
 
 	// Use this for initialization
 	void Start () {
@@ -45,10 +48,13 @@ public class CameraMove : MonoBehaviour {
             else
             core.transform.Rotate(Vector3.right * Time.deltaTime * speed);
         }
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && !endFlag)
         {
             if (hit)
             {
+                Debug.Log("jump");
+                hit = false;
+                jumpFlag = true;
                 Vector3 cameraFront = GameObject.FindWithTag("MainCamera").transform.forward;
                 cameraFront.y = 0;
                 cameraFront = Vector3.Normalize(cameraFront);
@@ -68,14 +74,20 @@ public class CameraMove : MonoBehaviour {
                 count++;
             }
         }
-        hit = false;
+            
+        Debug.Log("hit" + hit);
         Debug.Log(score);
         dead();
     }
     void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.tag != "ErectricPorn")
-            hit = true;
+        if (collision.collider.tag != "ErectricPorn" && collision.collider.tag != "Car")
+        {
+            if (!jumpFlag)
+                hit = true;
+            else
+                jumpFlag = false;
+        }
 
         if (collision.collider.tag == "StartPos" && !startSide)
         {
@@ -97,6 +109,17 @@ public class CameraMove : MonoBehaviour {
 			collision.collider.tag == "EncPos") {
 			AudioManager.Instance.PlaySE (1);
 		}
+
+        if (collision.collider.tag == "Car" && !carHit)
+        {
+            carHit = true;
+            Debug.Log(true);
+            AudioManager.Instance.PlaySE(2);
+            if(collision.gameObject.GetComponent<Car>().ReturnLeft())
+                this.GetComponent<Rigidbody>().AddForce(new Vector3(20.0f, 20.0f, 0), ForceMode.Impulse);
+            else
+                this.GetComponent<Rigidbody>().AddForce(new Vector3(-20.0f, 20.0f, 0), ForceMode.Impulse);      
+        }
 	}
 
     public bool PlayerGoEnd()
@@ -106,14 +129,20 @@ public class CameraMove : MonoBehaviour {
 
     void dead()
     {
-        if (transform.position.y <= -10)
+        if (transform.position.y < -100)
         {
-            //transform.position = spawn.transform.position;
-            //transform.rotation = spawn.transform.rotation;
-            save.SendMessage("Save_Score", score);
-
             Application.LoadLevel("test");
-
+            save.SendMessage("Save_Score", score);
+        }
+        else if (transform.position.y <= 0)
+        {
+            if (!endFlag)
+            {
+                //transform.position =spawn.transform.position;
+                //transform.rotation = spawn.transform.rotation;
+                AudioManager.Instance.PlaySE(4);
+            }
+            endFlag = true;
         }
     }
 }
