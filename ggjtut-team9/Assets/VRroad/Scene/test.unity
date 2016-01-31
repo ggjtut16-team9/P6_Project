@@ -500,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count1: {fileID: 38550369}
   count2: {fileID: 764534132}
+  score: {fileID: 20504610}
   count:
   - {fileID: 21300000, guid: c21cf34b7eefbc9428e43cf4e5d671c2, type: 3}
   - {fileID: 21300002, guid: c21cf34b7eefbc9428e43cf4e5d671c2, type: 3}
@@ -524,7 +525,7 @@ Transform:
   - {fileID: 38550370}
   - {fileID: 764534133}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1 &181596025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,7 +2346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!1 &1825867966 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ea8938e6786221441a73f3a11a3f4d67, type: 3}

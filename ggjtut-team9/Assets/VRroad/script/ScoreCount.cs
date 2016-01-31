@@ -6,6 +6,8 @@ public class ScoreCount : MonoBehaviour {
     public SpriteRenderer count1;
     public SpriteRenderer count2;
 
+    public GameObject score;
+
 
     public Sprite[] count = new Sprite[10];
 
@@ -63,7 +65,11 @@ public class ScoreCount : MonoBehaviour {
                 count1.sprite = count[9];
                 count2.sprite = count[9];
                 break;
-
+            case 10:
+                score.SendMessage("Save_Score", cameramove.score);
+                DontDestroyOnLoad(score);
+                Application.LoadLevel("TitleScene");
+                break;
         }
 
     }
